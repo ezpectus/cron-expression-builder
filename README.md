@@ -2,9 +2,24 @@
 
 A visual cron expression builder that lets you construct cron schedules through an intuitive UI — no more memorizing cryptic syntax. Generates cron expressions, shows the next 10 run times, and provides human-readable descriptions.
 
-## Screenshots
+## Who Is This For?
 
-![Cron Builder UI](./docs/screenshot-placeholder.png)
+- **DevOps engineers** — build cron schedules for Jenkins, GitHub Actions, Kubernetes CronJobs without syntax errors
+- **Backend developers** — generate `crontab` entries for scheduled tasks, backups, and cleanup jobs
+- **Sysadmins** — parse existing cron expressions to understand what they do
+- **Beginners learning cron** — visual UI + human-readable description makes cron syntax click
+- **Teams** — share cron expressions with non-technical teammates who need to understand schedules
+
+## What Can You Learn From This Codebase?
+
+- **React architecture** — MVC pattern with hooks (Controller), components (View), utils (Model)
+- **Design patterns** — Factory, Strategy, Builder, Observer, Singleton in a real project
+- **Security hardening** — CSP headers, XSS prevention, input sanitization, rate limiting, bot detection
+- **Testing** — 230 unit tests with Vitest covering edge cases, invalid input, and security
+- **React hooks** — `useCronBuilder`, `useNextRuns`, `useTheme`, `useHistory`, `useSubscription`, `useCopyToClipboard`
+- **Freemium model** — subscription state management with localStorage persistence
+- **Build tooling** — Vite, ESLint, Terser, cross-platform scripts, CI/CD with GitHub Actions
+- **Deployment** — Netlify with security headers, Docker containerization
 
 ## Features
 
@@ -133,7 +148,7 @@ npm run preview
 npx vitest run
 
 # Run linter
-npx eslint src/ --ext .js,.jsx
+npm run lint
 
 # Security audit
 npm run audit
@@ -172,7 +187,6 @@ All scripts check for Node.js v20+ and install dependencies automatically if `no
 ## Project Structure
 
 ```
-cron-builder/
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -236,7 +250,7 @@ cron-builder/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── index.html
-├── LICENSE                  # Proprietary, All Rights Reserved
+├── LICENSE                  # MIT (open source)
 ├── netlify.toml             # CSP, security headers, HTTPS, cache
 ├── package.json
 ├── postcss.config.js
@@ -255,7 +269,7 @@ The app follows an MVC architecture:
 - **View** (`components/`) — React components rendering the UI
 - **Controller** (`hooks/`) — Custom hooks managing state and orchestrating model functions
 
-Design patterns applied: Factory, Strategy, Builder, Observer, Singleton. See [ARCHITECTURE.md](../docs/ARCHITECTURE.md) for details.
+Design patterns applied: Factory, Strategy, Builder, Observer, Singleton. See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for details.
 
 ## Testing
 
@@ -267,7 +281,7 @@ npx vitest run
 npx vitest
 
 # Run linting
-npx eslint src/ --ext .js,.jsx
+npm run lint
 ```
 
 230 tests covering:
@@ -302,7 +316,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for development setup, code style, secu
 
 ## Changelog
 
-See [CHANGELOG.md](../docs/CHANGELOG.md) for version history.
+See [CHANGELOG.md](./docs/CHANGELOG.md) for version history.
 
 ## License
 

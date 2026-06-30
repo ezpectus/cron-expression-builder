@@ -41,4 +41,4 @@ coverage/
 *.tmp
 *.bak
 test_output.txt
-run-eslint.cjs
+run-eslint.mjs
